@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>happy bf day 💕</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  margin:0;
+  height:100vh;
+  background:linear-gradient(180deg,#fde2e4,#fadadd);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* confetti */
+.confetti{
+  position:fixed;
+  top:-10px;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{transform:translateY(110vh)}
+}
+
+/* card */
+.card{
+  background:rgba(255,255,255,0.92);
+  border-radius:24px;
+  padding:26px 22px 30px;
+  width:320px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  position:relative;
+}
+
+/* panda image */
+.illustration{
+  width:160px;
+  margin:0 auto 15px;
+}
+
+.illustration img{
+  width:100%;
+}
+
+/* text */
+h1{
+  margin:10px 0 6px;
+  font-size:20px;
+  font-weight:600;
+}
+
+.subtitle{
+  font-size:14px;
+  opacity:0.7;
+  margin-bottom:18px;
+}
+
+/* button */
+button{
+  background:#ff5c8a;
+  color:#fff;
+  border:none;
+  padding:14px 26px;
+  border-radius:30px;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(255,92,138,.45);
+  transition:.3s;
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+/* footer */
+.footer{
+  margin-top:16px;
+  font-size:12px;
+  opacity:.5;
+}
+</style>
+</head>
+<body>
+
+<!-- confetti -->
+<script>
+for(let i=0;i<40;i++){
+  let c=document.createElement("div");
+  c.className="confetti";
+  c.style.left=Math.random()*100+"vw";
+  c.style.background=["#ff5c8a","#ffc8dd","#ffd166","#bde0fe"]
+    [Math.floor(Math.random()*4)];
+  c.style.animationDuration=(Math.random()*3+2)+"s";
+  document.body.appendChild(c);
+}
+</script>
+
+<div class="card">
+  <div class="illustration">
+    <!-- GANTI GAMBAR DI SINI -->
+    <img src="C:\Users\RPL\Downloads\foto.jpg.gif" alt="cute panda">
+  </div>
+
+  <h1>happy bf day sayanggg</h1>
+  <div class="subtitle">
+    aku ada sesuatu buat kamuu...<br>
+    click to find out
+  </div>
+
+  <button onclick="next()">tap ❤️</button>
+
+  <div class="footer">made with 🤍</div>
+</div>
+
+<script>
+function next(){
+  document.querySelector("h1").innerText = "i love you 🤍";
+  document.querySelector(".subtitle").innerHTML =
+    "makasih udah jadi rumah<br>buat aku sampai hari ini 🥺";
+}
+</script>
+
+</body>
+</html>
